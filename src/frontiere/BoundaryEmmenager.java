@@ -12,10 +12,10 @@ public class BoundaryEmmenager {
 	public void emmenager(String nomVisiteur) {
 		if (controlEmmenager.isHabitant(nomVisiteur)) {
 			System.out.println(
-					"Mais vous êtes déjà un habitant du village !");
+					"Mais vous etes deja� un habitant du village !");
 		} else {
 			StringBuilder question = new StringBuilder();
-			question.append("Êtes-vous :\n");
+			question.append("etes-vous :\n");
 			question.append("1 - un druide.\n");
 			question.append("2 - un gaulois.\n");
 			int choixUtilisateur = -1;
@@ -27,7 +27,7 @@ public class BoundaryEmmenager {
 					break;
 
 				case 2:
-					//TODO a completer
+					emmenagerGaulois(nomVisiteur);
 					break;
 
 				default:
@@ -40,6 +40,11 @@ public class BoundaryEmmenager {
 	}
 
 	private void emmenagerDruide(String nomVisiteur) {
+		System.out.println("Bienvenue druide" + nomVisiteur);
+		int force = Clavier.entrerEntier("Quelle est votre force ?\n");
+	}
+	
+	private void emmenagerGaulois(String nomVisiteur) {
 		//TODO a completer
 	}
 }

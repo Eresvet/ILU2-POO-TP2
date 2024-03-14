@@ -14,10 +14,10 @@ public class BoundaryAfficherVillage {
 		String nomVillage = controlAfficherVillage.donnerNomVillage();
 		String[] donneesVillage = controlAfficherVillage.donnerNomsVillageois();
 		System.out.println("Bienvenue dans " + nomVillage
-				+ " dirigé par le chef " + donneesVillage[0] + ".");
-		System.out.println("Ce village possède un joli marché avec "
+				+ " dirige par le chef " + donneesVillage[0] + ".");
+		System.out.println("Ce village possede un joli marche avec "
 				+ controlAfficherVillage.donnerNbEtals()
-				+ " étals mis à la disposition des villageois afin qu'ils puissent vendre leurs produits.");
+				+ " etals mis a la disposition des villageois afin qu'ils puissent vendre leurs produits.");
 		if (donneesVillage.length > 1) {
 			System.out.println("En plus du chef, il y a "
 					+ (donneesVillage.length - 1) + " habitants : ");
