@@ -14,7 +14,7 @@ public class Druide extends Gaulois {
 		this.effetPotionMax = effetPotionMax;
 		parler("Bonjour, je suis le druide " + nom
 				+ " et ma potion peut aller d'une force " + effetPotionMin
-				+ " à " + effetPotionMax + ".");
+				+ " a� " + effetPotionMax + ".");
 	}
 
 	public void preparerPotion() {
@@ -23,16 +23,16 @@ public class Druide extends Gaulois {
 				+ effetPotionMin;
 		String texte = "";
 		if (forcePotion > 7) {
-			texte += "J'ai préparé une super potion ";
+			texte += "J'ai prepare une super potion ";
 		} else {
-			texte += "Je n'ai pas trouvé tous les ingrédients, ma potion est seulement ";
+			texte += "Je n'ai pas trouve tous les ingredients, ma potion est seulement ";
 		}
 		parler(texte + "de force " + forcePotion + ".");
 	}
 
 	public void booster(Gaulois gaulois) {
-		if (gaulois.getNom().equals("Obélix")) {
-			parler("Non, Obélix !... Tu n'auras pas de potion magique !");
+		if (gaulois.getNom().equals("Obelix")) {
+			parler("Non, Obelix !... Tu n'auras pas de potion magique !");
 		} else {
 			gaulois.boirePotion(forcePotion);
 		}

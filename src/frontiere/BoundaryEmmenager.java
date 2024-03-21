@@ -40,11 +40,24 @@ public class BoundaryEmmenager {
 	}
 
 	private void emmenagerDruide(String nomVisiteur) {
-		System.out.println("Bienvenue druide" + nomVisiteur);
+		System.out.println("Bienvenue druide " + nomVisiteur);
 		int force = Clavier.entrerEntier("Quelle est votre force ?\n");
+		int forcePlusFaible = Clavier.entrerEntier("Quelle est la force de potion " + 
+				"plus faible que vous produisez ?");
+		int forcePlusForte = Clavier.entrerEntier("Quelle est la force de potion " + 
+				"plus forte que vous produisez ?");
+		if(forcePlusForte < forcePlusFaible) {
+			System.out.println("Attention Druide, vous vous etes trompe entre le minimum " + 
+					"et le maximum.\n");
+		}
+		
+		controlEmmenager.ajouterDruide(nomVisiteur, force, forcePlusFaible, forcePlusForte);
+		
 	}
 	
 	private void emmenagerGaulois(String nomVisiteur) {
-		//TODO a completer
+		System.out.println("Bienvenue villageois " + nomVisiteur);
+		int force = Clavier.entrerEntier("Quelle est votre force ?\n");
+		controlEmmenager.ajouterGaulois(nomVisiteur, force);
 	}
 }
