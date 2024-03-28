@@ -14,7 +14,7 @@ public class BoundaryAfficherMarche {
 		if(infosMarche.length == 0) {
 			System.out.println("Le marche est vide, revenez plus tard.\n");
 		}else {
-			System.out.println(nomAcheteur + ", vous trouvez au marche :\n");
+			System.out.println(nomAcheteur + ", vous trouverez au marche :\n");
 			for(int i = 0; i < infosMarche.length; i++) {
 				String vendeur = infosMarche[i];
 				i++;
