@@ -11,7 +11,7 @@ public class ControlAfficherMarche {
 
 	public String[] donnerInfosMarche() {
 		String[] infosMarche = null;
-		//TODO
+		infosMarche = village.donnerEtatMarche();
 		return infosMarche;
 	}
 }
